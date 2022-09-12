@@ -1,0 +1,21 @@
+/*CSS RESET*/
+
+* { 
+  box-sizing: border-box; 
+} /* Switch to border-box for box-sizing. */
+
+body {
+  margin: 0; /* Remove the tiny space around the edge of the page */
+}
+
+img, video, canvas, audio, iframe, embed, object  { 
+  display: block; /* Switch display mode to block, since that's what we usually want for images. */
+}
+
+/*GENERAL RULES*/
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
