@@ -44,7 +44,7 @@ function Navbar() {
       if(adultGuests > 0){
         setAdultGuests(adultGuests - 1); 
         if(totalGuests > 0 )
-        setTotalGuests(totalGuests - 1);
+          setTotalGuests(totalGuests - 1);
       }
         
     }
