@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../stylesheets/Navbar.css";
 import RegularNavbar from "./RegularNavbar.jsx";
 import SelectedNavbar from "./SelectedNavbar.jsx";
 

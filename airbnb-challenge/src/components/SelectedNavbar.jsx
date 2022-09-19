@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/SelectedNavbar.css";
+import "../stylesheets/navbar/SelectedNavbar.css";
 
 function SelectedNavbar({ navbarSelected, locationFocus, focusLocation, locationText, 
                         changeLocation, guestsFocus, focusGuests, totalGuests, 

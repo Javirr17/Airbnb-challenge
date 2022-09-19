@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/RegularNavbar.css";
+import "../stylesheets/navbar/RegularNavbar.css";
 
 function RegularNavbar({ navbarSelected, locationText, focusLocation, focusGuests, totalGuests }) {
     return (
