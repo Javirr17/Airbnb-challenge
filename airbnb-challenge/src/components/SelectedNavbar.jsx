@@ -84,8 +84,8 @@ function SelectedNavbar({ navbarSelected, locationFocus, focusLocation, location
 
           <div className="separator"></div>
           
-          <div className="items-wrapper flex" style={{width: 426}}>
-            <div className="search-wrapper flex">
+          <div className="outer-search-wrapper flex" >
+            <div className="inner-search-wrapper flex">
               <span class="material-symbols-outlined inversed">search</span>
               <p id="searchText">Search</p>
             </div>
