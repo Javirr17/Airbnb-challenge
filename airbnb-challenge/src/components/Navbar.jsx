@@ -67,22 +67,27 @@ function Navbar() {
           <img src={require("../images/logo.png")} alt="logo" />
         </div>
         <div className="select-container">
-          <p onClick={focusLocation}>{locationText}</p>
+          <div className="select-text-container">
+            <p onClick={focusLocation}>{locationText}</p>
+          </div>
           <div className="separator"></div>
-          <p onClick={focusGuests} className={`${totalGuests === 0 ? "no-selection" : ""}`}>{totalGuests === 0 ? "Add guests" : totalGuests}</p>
+          <div className="select-text-container">
+            <p onClick={focusGuests} className={`${totalGuests === 0 ? "no-selection" : ""}`}>{totalGuests === 0 ? "Add guests" : totalGuests}</p>
+          </div>
           <div className="separator"></div>
-          <span class="material-symbols-outlined">search</span>
+          <div className="select-text-container" style={{width: 50}}>
+            <span class="material-symbols-outlined">search</span>
+          </div>
         </div>
       </div>
 
       {/*extended navbar*/}
 
-      <div
-        className={`extended-wrapper ${!navbarSelected ? "display-none" : ""}`}
-      >
+      <div className={`extended-wrapper ${!navbarSelected ? "display-none" : ""}`}>
+        
         <div className="extended-select-container">
 
-          <div>
+          <div className="inner-field-wrapper">
 
                 <div
                     className={`items-wrapper ${locationFocus ? "fieldFocused" : ""}`}
@@ -95,22 +100,22 @@ function Navbar() {
                 <div style={{marginTop: "30px"}} className={`${!locationFocus ? "display-none" : ""}`}> 
 
                     <div className="inner-location-wrapper" onClick={() => changeLocation("Helsinki, Finland")}>
-                        <span class="material-symbols-outlined">location_on</span>
+                        <span class="material-symbols-outlined ubi-logo">location_on</span>
                         <p className="inner-location-text">Helsinki, Finland</p>
                     </div>
 
                     <div className="inner-location-wrapper" onClick={() => changeLocation("Turku, Finland")}>
-                        <span class="material-symbols-outlined">location_on</span>
+                        <span class="material-symbols-outlined ubi-logo">location_on</span>
                         <p className="inner-location-text">Turku, Finland</p>
                     </div>
 
                     <div className="inner-location-wrapper" onClick={() => changeLocation("Oulu, Finland")}>
-                        <span class="material-symbols-outlined">location_on</span>
+                        <span class="material-symbols-outlined ubi-logo">location_on</span>
                         <p className="inner-location-text">Oulu, Finland</p>
                     </div>
 
                     <div className="inner-location-wrapper" onClick={() => changeLocation("Vaasa, Finland")}>
-                        <span class="material-symbols-outlined">location_on</span>
+                        <span class="material-symbols-outlined ubi-logo">location_on</span>
                         <p className="inner-location-text">Vaasa, Finland</p>
                     </div>
                 
@@ -120,7 +125,7 @@ function Navbar() {
 
           <div className="separator"></div>
 
-          <div>
+          <div className="inner-field-wrapper">
 
             <div
               className={`items-wrapper ${guestsFocus ? "fieldFocused" : ""}`}
@@ -156,7 +161,7 @@ function Navbar() {
 
           <div className="separator"></div>
           
-          <div className="items-wrapper flex">
+          <div className="items-wrapper flex" style={{width: 426}}>
             <div className="search-wrapper flex">
               <span class="material-symbols-outlined inversed">search</span>
               <p id="searchText">Search</p>

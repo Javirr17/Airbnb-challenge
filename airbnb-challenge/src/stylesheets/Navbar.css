@@ -4,7 +4,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
     margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        display: block;
+    }
+    .select-container{
+        justify-content: center;
+        margin: 30px auto;
+    }
 }
 
 .select-container {
@@ -23,6 +34,12 @@
     cursor: pointer;
 }
 
+.select-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .no-selection {
     color: #BDBDBD;
     user-select: none;
@@ -38,9 +55,14 @@
 .material-symbols-outlined {
     display: inline-block;
     color: #EB5757;
-    margin-left: 15px;
-    padding-top: 15px;  
+    padding-left: 15px; 
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .material-symbols-outlined {
+        padding-left: 0; 
+    }
 }
 
 .inversed {
@@ -59,11 +81,24 @@
 }
 
 .extended-select-container{
-    min-width: 1248px;
+    width: min(90%, 1250px);
     height: 55px;
     border-radius: 16px;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
     display: flex;
+}
+
+@media (max-width: 600px) {
+    .extended-select-container{
+        display: block;
+        width: 360px;
+    }
+    .items-wrapper{
+        width: 360px;
+    }
+    .inner-location-wrapper{
+        margin-left: 20px;
+    }
 }
 
 .inner-location-wrapper{
@@ -71,9 +106,16 @@
     margin-bottom: 5px;
 }
 
+.inner-field-wrapper{
+    width: min(90%, 426px);
+}
+
 .items-wrapper {
-    min-width: 426px;
     height: 55px;
+}
+
+.ubi-logo{
+    padding-top: 15px; 
 }
 
 .selected-field-text {
