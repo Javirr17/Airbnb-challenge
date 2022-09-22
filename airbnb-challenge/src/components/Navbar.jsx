@@ -3,34 +3,28 @@ import RegularNavbar from "./RegularNavbar.jsx";
 import SelectedNavbar from "./SelectedNavbar.jsx";
 
 
-function Navbar() {
+function Navbar({changeLocation, locationText, totalGuests, setTotalGuests}) {
   const [navbarSelected, setNavbarSelected] = useState(false);
   const [locationFocus, setLocationFocus] = useState(false);
   const [guestsFocus, setGuestsFocus] = useState(false);
-  const [locationText, setLocationText] = useState("Helsinki, Finland");
-  const [totalGuests, setTotalGuests] = useState(0);
   const [adultGuests, setAdultGuests] = useState(0);
   const [childrenGuests, setChildrenGuests] = useState(0);
 
   const focusLocation = () => {
     setGuestsFocus(false);
     setLocationFocus(true);
-    selectNavbar();
+    selectNavbar(true);
   };
 
   const focusGuests = () => {
     setLocationFocus(false);
     setGuestsFocus(true);
-    selectNavbar();
+    selectNavbar(true);
   };
 
-  const selectNavbar = () => {
-    setNavbarSelected(true);
+  const selectNavbar = (value) => {
+    setNavbarSelected(value);
   };
-
-  const changeLocation = newLocation => {
-    setLocationText(newLocation);
-  }
 
   const addGuest = guestType => {
 
@@ -59,7 +53,10 @@ function Navbar() {
            
     }
 
+  }
 
+  const search = () => {
+    selectNavbar(false);
   }
 
   return (
@@ -69,11 +66,13 @@ function Navbar() {
         locationText={locationText}
         focusLocation={focusLocation}
         focusGuests={focusGuests}
-        totalGuests={totalGuests}/>
+        totalGuests={totalGuests}
+        search={search}/>
 
       <SelectedNavbar navbarSelected={navbarSelected} locationFocus={locationFocus} focusLocation={focusLocation} locationText={locationText}
                       changeLocation={changeLocation} guestsFocus={guestsFocus} focusGuests={focusGuests} totalGuests={totalGuests}
                       substractGuest={substractGuest} addGuest={addGuest} childrenGuests={childrenGuests} adultGuests={adultGuests}
+                      search={search}
         />
     </>
   );

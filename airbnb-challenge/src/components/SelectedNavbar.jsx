@@ -3,10 +3,10 @@ import "../stylesheets/navbar/SelectedNavbar.css";
 
 function SelectedNavbar({ navbarSelected, locationFocus, focusLocation, locationText, 
                         changeLocation, guestsFocus, focusGuests, totalGuests, 
-                        substractGuest, addGuest, childrenGuests, adultGuests }) {
-
+                        substractGuest, addGuest, childrenGuests, adultGuests, search }) {
+                        
     return (
-        <div className={`extended-wrapper ${!navbarSelected ? "display-none" : ""}`}>
+      <div className={`extended-wrapper ${!navbarSelected ? "display-none" : ""}`}>
         
         <div className="extended-select-container">
 
@@ -17,27 +17,27 @@ function SelectedNavbar({ navbarSelected, locationFocus, focusLocation, location
                     onClick={focusLocation}
                 >
                 <p className="select-title selected-field-text">LOCATION</p>
-                <p className="selected-field-text">{locationText}</p>
+                <p className="selected-field-text">{locationText}, Finland</p>
                 </div>
 
                 <div style={{marginTop: "30px"}} className={`${!locationFocus ? "display-none" : ""}`}> 
 
-                    <div className="inner-location-wrapper" onClick={() => changeLocation("Helsinki, Finland")}>
+                    <div className="inner-location-wrapper" onClick={() => changeLocation("Helsinki")}>
                         <span class="material-symbols-outlined ubi-logo">location_on</span>
                         <p className="inner-location-text">Helsinki, Finland</p>
                     </div>
 
-                    <div className="inner-location-wrapper" onClick={() => changeLocation("Turku, Finland")}>
+                    <div className="inner-location-wrapper" onClick={() => changeLocation("Turku")}>
                         <span class="material-symbols-outlined ubi-logo">location_on</span>
                         <p className="inner-location-text">Turku, Finland</p>
                     </div>
 
-                    <div className="inner-location-wrapper" onClick={() => changeLocation("Oulu, Finland")}>
+                    <div className="inner-location-wrapper" onClick={() => changeLocation("Oulu")}>
                         <span class="material-symbols-outlined ubi-logo">location_on</span>
                         <p className="inner-location-text">Oulu, Finland</p>
                     </div>
 
-                    <div className="inner-location-wrapper" onClick={() => changeLocation("Vaasa, Finland")}>
+                    <div className="inner-location-wrapper" onClick={() => changeLocation("Vaasa")}>
                         <span class="material-symbols-outlined ubi-logo">location_on</span>
                         <p className="inner-location-text">Vaasa, Finland</p>
                     </div>
@@ -85,13 +85,12 @@ function SelectedNavbar({ navbarSelected, locationFocus, focusLocation, location
           <div className="separator"></div>
           
           <div className="outer-search-wrapper flex" >
-            <div className="inner-search-wrapper flex">
+            <div className="inner-search-wrapper flex" onClick={search}>
               <span class="material-symbols-outlined inversed">search</span>
               <p id="searchText">Search</p>
             </div>
           </div>
         </div>
-
       </div>
     );
 

@@ -27,9 +27,6 @@
 }
 
 .select-container p {
-    display: inline-block;
-    padding-left: 15px;
-    padding-right: 15px;
     font-family: 'Mulish', sans-serif;
     cursor: pointer;
 }
