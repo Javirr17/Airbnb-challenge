@@ -3,8 +3,7 @@ import RegularNavbar from "./RegularNavbar.jsx";
 import SelectedNavbar from "./SelectedNavbar.jsx";
 
 
-function Navbar({changeLocation, locationText, totalGuests, setTotalGuests}) {
-  const [navbarSelected, setNavbarSelected] = useState(false);
+function Navbar({changeLocation, locationText, totalGuests, setTotalGuests, updateStays, navbarSelected, selectNavbar}) {
   const [locationFocus, setLocationFocus] = useState(false);
   const [guestsFocus, setGuestsFocus] = useState(false);
   const [adultGuests, setAdultGuests] = useState(0);
@@ -20,10 +19,6 @@ function Navbar({changeLocation, locationText, totalGuests, setTotalGuests}) {
     setLocationFocus(false);
     setGuestsFocus(true);
     selectNavbar(true);
-  };
-
-  const selectNavbar = (value) => {
-    setNavbarSelected(value);
   };
 
   const addGuest = guestType => {
@@ -57,6 +52,7 @@ function Navbar({changeLocation, locationText, totalGuests, setTotalGuests}) {
 
   const search = () => {
     selectNavbar(false);
+    updateStays();
   }
 
   return (

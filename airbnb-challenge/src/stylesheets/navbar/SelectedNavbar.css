@@ -7,9 +7,9 @@
 
 .extended-wrapper {
     width: 100%;
-    height: 330px;
+    height: 420px;
     display: flex;
-    margin-top: 70px;
+    padding-top: 70px;
     justify-content: center;
     z-index: 1;
     background-color: white;
@@ -21,6 +21,7 @@
     border-radius: 16px;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
     display: flex;
+    position: relative;
 }
 
 .inner-location-wrapper{
@@ -60,7 +61,7 @@
     font-family: 'Mulish', sans-serif;
     font-weight: 600;
     font-size: 16px;
-    line-height: 20pxpx;
+    line-height: 20px;
     color: #333333;
 }
 
@@ -150,6 +151,8 @@
     }
     .outer-search-wrapper{
         width: 360px;
+        position: absolute;
+        top: 470px;
     }
     .inner-location-wrapper{
         margin-left: 20px;
